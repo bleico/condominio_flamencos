@@ -1,4 +1,4 @@
-import 'package:condominio_flamencos/appbar.dart';
+import 'package:condominio_flamencos/app_bar.dart';
 import 'package:condominio_flamencos/info_page.dart';
 import 'package:condominio_flamencos/theme.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +15,7 @@ class AcercaPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const AppBarWidget(title: 'Acerca de'),
+            const SizedBox(height: 20),
             const InfoPage(),
             const SizedBox(height: 20),
             const Padding(

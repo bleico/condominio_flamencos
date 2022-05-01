@@ -1,6 +1,6 @@
 import 'package:beamer/beamer.dart';
 import 'package:condominio_flamencos/acerca.dart';
-import 'package:condominio_flamencos/appbar.dart';
+import 'package:condominio_flamencos/app_bar.dart';
 import 'package:condominio_flamencos/info_page.dart';
 import 'package:condominio_flamencos/junta_page.dart';
 import 'package:condominio_flamencos/problemas_page.dart';
@@ -131,6 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             AppBarWidget(title: widget.title),
+            const SizedBox(height: 20),
             const InfoPage(),
             const SizedBox(height: 20),
             Container(
