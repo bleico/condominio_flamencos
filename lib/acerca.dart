@@ -26,8 +26,8 @@ class AcercaPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Container(
-              height: MediaQuery.of(context).size.height * 0.20,
-              width: MediaQuery.of(context).size.width * 0.30,
+              height: 150,
+              width: 400,
               decoration: BoxDecoration(
                 border: Border.all(),
                 color: Colors.orange[100],
@@ -37,41 +37,53 @@ class AcercaPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
-                  Text(
-                    'Contacto:',
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      fontSize: 19,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                  Expanded(
+                    child: Text(
+                      'Contacto:',
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        fontSize: 19,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 10),
-                  Text(
-                    "Guatire, El Marques, sector Los Flamencos.",
-                    style: textStyleCard,
-                    textAlign: TextAlign.justify,
+                  Expanded(
+                    child: Text(
+                      "Guatire, El Marques, sector Los Flamencos.",
+                      style: textStyleCard,
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
-                  Text(
-                    "Jefe de condominio: Andrés Eloy Márquez García",
-                    style: textStyleCard,
-                    textAlign: TextAlign.justify,
+                  Expanded(
+                    child: Text(
+                      "Jefe de condominio: Andrés Eloy Márquez García",
+                      style: textStyleCard,
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
-                  Text(
-                    "Correo: condominiolosflamencos@hotmail.com",
-                    style: textStyleCard,
-                    textAlign: TextAlign.justify,
+                  Expanded(
+                    child: Text(
+                      "Correo: condominiolosflamencos@hotmail.com",
+                      style: textStyleCard,
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
-                  Text(
-                    "Telf. (0414) 2277520",
-                    style: textStyleCard,
-                    textAlign: TextAlign.justify,
+                  Expanded(
+                    child: Text(
+                      "Telf. (0414) 2277520",
+                      style: textStyleCard,
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
-                  Text(
-                    "Horario 8:00 am - 7:00m",
-                    style: textStyleCard,
-                    textAlign: TextAlign.justify,
+                  Expanded(
+                    child: Text(
+                      "Horario 8:00 am - 7:00m",
+                      style: textStyleCard,
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
                 ],
               ),

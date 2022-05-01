@@ -15,18 +15,40 @@ class MyApp extends StatelessWidget {
   final routerDelegate = BeamerDelegate(
     locationBuilder: RoutesLocationBuilder(
       routes: {
-        // Return either Widgets or BeamPages if more customization is needed
         '/': (context, state, data) {
           return const BeamPage(
+            title: 'Condominio Los Flamencos',
+            key: ValueKey('condominio'),
+            type: BeamPageType.fadeTransition,
             child: MyHomePage(
               title: 'Condominio Los Flamencos',
             ),
           );
         },
-
-        '/acerca': (context, state, data) => const AcercaPage(),
-        '/junta': (context, state, data) => const JuntaPage(),
-        '/problemas': (context, state, data) => const ProblemasPage(),
+        '/acerca': (context, state, data) {
+          return const BeamPage(
+            title: 'Acerca de',
+            key: ValueKey('acerca'),
+            type: BeamPageType.fadeTransition,
+            child: AcercaPage(),
+          );
+        },
+        '/junta': (context, state, data) {
+          return const BeamPage(
+            key: ValueKey('junta'),
+            title: 'Junta de Condominio',
+            type: BeamPageType.fadeTransition,
+            child: JuntaPage(),
+          );
+        },
+        '/problemas': (context, state, data) {
+          return const BeamPage(
+            key: ValueKey('problemas'),
+            type: BeamPageType.fadeTransition,
+            title: 'Problemas',
+            child: ProblemasPage(),
+          );
+        },
       },
     ),
   );
@@ -39,6 +61,7 @@ class MyApp extends StatelessWidget {
       routeInformationParser: BeamerParser(),
       routerDelegate: routerDelegate,
       debugShowCheckedModeBanner: false,
+      title: 'Condominio Los Flamencos',
       theme: ThemeData(
         primaryColor: const MaterialColor(0xff64b5f6, {
           50: Color(0xff64b5f6),
@@ -144,22 +167,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(fontSize: 30),
                   ),
                   const SizedBox(height: 10),
-                  const Text(
-                    'Las edificaciones constituyen el escenario fundamental de las actividades humanas, a la vez que son grandes consumidoras de energía. Según estadísticas internacionales, alrededor del 40% de la energía total consumida se destina a ellas, y el resto está repartido entre la industria y el transporte. Este hecho hace relevante la necesidad de establecer criterios para diseñar edificaciones que hagan un uso racional de la energía. Tal como lo muestra el gráfico 1, el sector residencial y el comercial representan el 60% del consumo de energía eléctrica en Venezuela, por lo cual se hace necesario orientar las recomendaciones de diseño hacia estos sectores. En particular el sector residencial es el de mayor consumo de energía eléctrica per cápita en América Latina (ver gráfico 2).',
-                    style: textStyleBody,
-                    textAlign: TextAlign.justify,
+                  const Expanded(
+                    child: Text(
+                      'Las edificaciones constituyen el escenario fundamental de las actividades humanas, a la vez que son grandes consumidoras de energía. Según estadísticas internacionales, alrededor del 40% de la energía total consumida se destina a ellas, y el resto está repartido entre la industria y el transporte. Este hecho hace relevante la necesidad de establecer criterios para diseñar edificaciones que hagan un uso racional de la energía. Tal como lo muestra el gráfico 1, el sector residencial y el comercial representan el 60% del consumo de energía eléctrica en Venezuela, por lo cual se hace necesario orientar las recomendaciones de diseño hacia estos sectores. En particular el sector residencial es el de mayor consumo de energía eléctrica per cápita en América Latina (ver gráfico 2).',
+                      style: textStyleBody,
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
                   const SizedBox(height: 10),
-                  const Text(
-                    'El mayor porcentaje de consumo energético en una edificación se produce a través de los sistemas de aire acondicionado y de iluminación. En oficinas, tal como se muestra en el gráfico 3, el consumo de energía generado por esos sistemas representa más del 60%, aunque este porcentaje puede variar ligeramente en otros usos: educacional, residencial, médico-asistencial, recreacional, etc. En consecuencia, las estrategias de eficiencia energética deben estar dirigidas en primer lugar a reducir el consumo en los equipos de aire acondicionado e iluminación.',
-                    style: textStyleBody,
-                    textAlign: TextAlign.justify,
+                  const Expanded(
+                    child: Text(
+                      'El mayor porcentaje de consumo energético en una edificación se produce a través de los sistemas de aire acondicionado y de iluminación. En oficinas, tal como se muestra en el gráfico 3, el consumo de energía generado por esos sistemas representa más del 60%, aunque este porcentaje puede variar ligeramente en otros usos: educacional, residencial, médico-asistencial, recreacional, etc. En consecuencia, las estrategias de eficiencia energética deben estar dirigidas en primer lugar a reducir el consumo en los equipos de aire acondicionado e iluminación.',
+                      style: textStyleBody,
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
                   const SizedBox(height: 10),
-                  const Text(
-                    'Se han identificado varias causas del aumento constante y sostenido del consumo de energía eléctrica en Venezuela:',
-                    style: textStyleBody,
-                    textAlign: TextAlign.start,
+                  const Expanded(
+                    child: Text(
+                      'Se han identificado varias causas del aumento constante y sostenido del consumo de energía eléctrica en Venezuela:',
+                      style: textStyleBody,
+                      textAlign: TextAlign.start,
+                    ),
                   ),
                 ],
               ),

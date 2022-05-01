@@ -22,13 +22,15 @@ class JuntaPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Image.asset('assets/images/condominio.png', height: 80),
-                const Text(
-                  'El Condominio del sector Los Flamencos está integrado por los siguientes propietarios:',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                const Expanded(
+                  child: Text(
+                    'El Condominio del sector Los Flamencos está integrado por los siguientes propietarios:',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.start,
                   ),
-                  textAlign: TextAlign.start,
                 ),
               ],
             ),
