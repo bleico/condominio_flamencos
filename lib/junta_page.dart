@@ -12,27 +12,31 @@ class JuntaPage extends StatelessWidget {
         physics: const PageScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const AppBarWidget(title: 'Junta de Condominio'),
             const SizedBox(height: 20),
             const InfoPage(),
             const SizedBox(height: 20),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.asset('assets/images/condominio.png', height: 80),
-                const Expanded(
-                  child: Text(
-                    'El Condominio del sector Los Flamencos está integrado por los siguientes propietarios:',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 200),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/condominio.png', height: 80),
+                  const Expanded(
+                    child: Text(
+                      'El Condominio del sector Los Flamencos está integrado por los siguientes propietarios:',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.start,
                     ),
-                    textAlign: TextAlign.start,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
