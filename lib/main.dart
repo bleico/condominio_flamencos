@@ -149,8 +149,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Expanded(
                     child: Container(
-                      height: MediaQuery.of(context).size.height * 0.35,
-                      width: MediaQuery.of(context).size.width * 0.60,
+                      height: 700,
+                      width: 900,
                       decoration: BoxDecoration(
                         border: Border.all(),
                         borderRadius: BorderRadius.circular(30),
