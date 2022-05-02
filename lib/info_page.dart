@@ -6,7 +6,10 @@ class InfoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      key: key,
+      physics: const ClampingScrollPhysics(),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -57,7 +60,10 @@ class _MenuState extends State<Menu> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(onPressed: navigateRoute, icon: Icon(widget.icons)),
+        IconButton(
+          onPressed: navigateRoute,
+          icon: Icon(widget.icons),
+        ),
         TextButton(
           onPressed: navigateRoute,
           child: Text(

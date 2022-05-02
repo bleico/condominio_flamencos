@@ -7,6 +7,6 @@ const textStyleCard = TextStyle(
 );
 
 const textStyleBody = TextStyle(
-  fontSize: 20,
+  fontSize: 16,
   color: Colors.black,
 );
