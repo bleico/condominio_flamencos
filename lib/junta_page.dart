@@ -1,5 +1,6 @@
 import 'package:condominio_flamencos/app_bar.dart';
 import 'package:condominio_flamencos/info_page.dart';
+import 'package:condominio_flamencos/theme.dart';
 import 'package:flutter/material.dart';
 
 class JuntaPage extends StatelessWidget {
@@ -19,20 +20,19 @@ class JuntaPage extends StatelessWidget {
             const InfoPage(),
             const SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 200),
+              padding: EdgeInsets.only(
+                left: MediaQuery.of(context).size.width * 0.2,
+              ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('assets/images/condominio.png', height: 80),
+                  Image.asset('assets/images/junta_logo.png', height: 80),
                   const SizedBox(width: 20),
                   const Expanded(
                     child: Text(
                       'El Condominio del sector Los Flamencos está integrado por los siguientes propietarios:',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: textStyleTitle,
                       textAlign: TextAlign.start,
                     ),
                   ),
@@ -155,10 +155,14 @@ class Propietarios extends StatelessWidget {
           ),
           TextSpan(
             text: nombre,
+            style: textStyleBody,
           ),
           TextSpan(
             text: cargo,
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
           ),
         ],
       ),

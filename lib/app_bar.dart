@@ -7,8 +7,8 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
-      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height * 0.09,
+      width: double.maxFinite,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: const AssetImage(
@@ -26,15 +26,16 @@ class AppBarWidget extends StatelessWidget {
           Positioned(
             left: MediaQuery.of(context).size.width * 0.05,
             right: MediaQuery.of(context).size.width * 0.05,
-            top: 20,
-            bottom: 20,
-            child: Text(
-              title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 28,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: Text(
+                title,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 26,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             ),
           ),
         ],

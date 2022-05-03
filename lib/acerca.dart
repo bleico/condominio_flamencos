@@ -27,63 +27,88 @@ class AcercaPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Container(
-              height: 150,
-              width: 400,
+              height: 240,
+              width: 500,
               decoration: BoxDecoration(
                 border: Border.all(),
                 color: Colors.orange[100],
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Column(
+              child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Expanded(
-                    child: Text(
-                      'Contacto:',
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        fontSize: 19,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Expanded(
-                    child: Text(
-                      "Guatire, El Marques, sector Los Flamencos.",
-                      style: textStyleCard,
-                      textAlign: TextAlign.justify,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(
+                      'assets/images/contacto.png',
+                      height: 80,
                     ),
                   ),
                   Expanded(
-                    child: Text(
-                      "Jefe de condominio: Andrés Eloy Márquez García",
-                      style: textStyleCard,
-                      textAlign: TextAlign.justify,
-                    ),
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Correo: condominiolosflamencos@hotmail.com",
-                      style: textStyleCard,
-                      textAlign: TextAlign.justify,
-                    ),
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Telf. (0414) 2277520",
-                      style: textStyleCard,
-                      textAlign: TextAlign.justify,
-                    ),
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Horario 8:00 am - 7:00m",
-                      style: textStyleCard,
-                      textAlign: TextAlign.justify,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        SizedBox(height: 10),
+                        Expanded(
+                          child: Text(
+                            'Contacto:',
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            "Guatire, El Marques, sector Los Flamencos.",
+                            style: textStyleBody,
+                            textAlign: TextAlign.start,
+                            maxLines: 2,
+                            softWrap: true,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            "Jefe de condominio: Andrés Eloy Márquez García",
+                            style: textStyleBody,
+                            textAlign: TextAlign.start,
+                            maxLines: 2,
+                            softWrap: true,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            "Correo: condominiolosflamencos@hotmail.com",
+                            style: textStyleBody,
+                            textAlign: TextAlign.start,
+                            maxLines: 2,
+                            softWrap: true,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            "Telf. (0414) 2277520",
+                            style: textStyleBody,
+                            textAlign: TextAlign.start,
+                            maxLines: 2,
+                            softWrap: true,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            "Horario 8:00 am - 7:00m",
+                            style: textStyleBody,
+                            textAlign: TextAlign.start,
+                            maxLines: 2,
+                            softWrap: true,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

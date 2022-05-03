@@ -134,13 +134,26 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 20),
             const InfoPage(),
             const SizedBox(height: 20),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 50),
-              child: const Text(
-                'En esta página encontrarás toda información referente al sector los flamencos. Además podrás estar enterado de los acontecimientos actuales como beneficio la Urb. El Marques, información de áreas verdes, entre otras….',
-                textAlign: TextAlign.justify,
-                style: textStyleBody,
-              ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 50),
+                  child: Image.asset(
+                    'assets/images/condominio.png',
+                    height: 80,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 40),
+                    child: const Text(
+                      'En esta página encontrarás toda información referente al sector los flamencos. Además podrás estar enterado de los acontecimientos actuales como beneficio la Urb. El Marques, información de áreas verdes, entre otras….',
+                      textAlign: TextAlign.justify,
+                      style: textStyleBody,
+                    ),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 30),
             Column(
@@ -160,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(height: 20),
                 const Text(
                   'Información del sector',
-                  style: TextStyle(fontSize: 30),
+                  style: textStyleTitle,
                 ),
                 const SizedBox(height: 10),
                 const Padding(
@@ -195,12 +208,6 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: Container(
         height: 20,
         color: Colors.blue[200],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        backgroundColor: Theme.of(context).primaryColorDark,
-        child: const Icon(Icons.arrow_upward),
       ),
     );
   }
