@@ -145,6 +145,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Expanded(
                   child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: Colors.blue,
+                        width: 2,
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(10),
                     margin: const EdgeInsets.symmetric(horizontal: 40),
                     child: const Text(
                       'En esta página encontrarás toda información referente al sector los flamencos. Además podrás estar enterado de los acontecimientos actuales como beneficio la Urb. El Marques, información de áreas verdes, entre otras….',
