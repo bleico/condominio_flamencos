@@ -20,14 +20,16 @@ class ProblemasPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: Image.asset('assets/images/problema.png', height: 150),
+                Image.asset(
+                  'assets/images/problema.png',
+                  height: 150,
+                  width: MediaQuery.of(context).size.width * 0.25,
                 ),
-                const Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 60),
-                    child: Text(
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 30),
+                    padding: const EdgeInsets.all(8.0),
+                    child: const Text(
                       'Unos de los problemas actuales es el portón, el cual se ha vuelto a dañar. Debido a que los vecinos por flojera abre el portón para uso peatonal en vez de entrar por la puerta principal.',
                       style: textStyleBody,
                     ),
@@ -93,17 +95,20 @@ class ProblemasPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 60),
-                    child: Text(
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width * 0.045),
+                    child: const Text(
                       'Ademas, otro problema es el tema de la basura acumulada, que se acumula en la zona de la puerta principal. Se informará a cada líder de edif el costo del mantenimiento de zonas verdes por apto.',
                       style: textStyleBody,
                     ),
                   ),
                 ),
+                const SizedBox(width: 20),
                 Container(
-                  margin: const EdgeInsets.only(right: 120),
+                  margin: EdgeInsets.only(
+                      right: MediaQuery.of(context).size.width * 0.045),
                   height: MediaQuery.of(context).size.height * 0.40,
                   width: MediaQuery.of(context).size.width * 0.35,
                   decoration: BoxDecoration(
