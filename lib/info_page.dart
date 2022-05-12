@@ -20,14 +20,19 @@ class InfoPage extends StatelessWidget {
             route: '/',
           ),
           Menu(
-            msg: 'Junta de condominio',
+            msg: 'Estructura',
             icons: Icons.balance,
             route: '/junta',
           ),
           Menu(
-            msg: 'Problemas',
+            msg: 'Reglas del Condominio',
+            icons: Icons.balance,
+            route: '/reglas',
+          ),
+          Menu(
+            msg: 'Notificaciones',
             icons: Icons.info,
-            route: '/problemas',
+            route: '/notificaciones',
           ),
           Menu(
             msg: 'Acerca de',
