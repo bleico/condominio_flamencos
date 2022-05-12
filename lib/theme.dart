@@ -15,5 +15,8 @@ const textStyleTitle = TextStyle(
   fontSize: 20,
   fontWeight: FontWeight.bold,
   color: Colors.black,
+  decoration: TextDecoration.underline,
+  decorationThickness: 2,
+  decorationColor: Colors.blue,
   fontStyle: FontStyle.italic,
 );
