@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routeInformationParser: BeamerParser(),
       routerDelegate: routerDelegate,
+      backButtonDispatcher: BeamerBackButtonDispatcher(
+        delegate: routerDelegate,
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Condominio Los Flamencos',
       theme: ThemeData(

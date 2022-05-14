@@ -6,6 +6,8 @@ import 'package:condominio_flamencos/notificaciones_page.dart';
 import 'package:condominio_flamencos/reglas.dart';
 import 'package:flutter/material.dart';
 
+import 'detail_image.dart';
+
 final routerDelegate = BeamerDelegate(
   locationBuilder: RoutesLocationBuilder(
     routes: {
@@ -13,6 +15,13 @@ final routerDelegate = BeamerDelegate(
         return const BeamPage(
           title: 'Condominio Los Flamencos',
           key: ValueKey('condominio'),
+          type: BeamPageType.fadeTransition,
+          child: MyHomePage(),
+        );
+      },
+      '*': (context, state, data) {
+        return const BeamPage(
+          title: 'Condominio Los Flamencos',
           type: BeamPageType.fadeTransition,
           child: MyHomePage(),
         );
@@ -47,6 +56,14 @@ final routerDelegate = BeamerDelegate(
           type: BeamPageType.fadeTransition,
           title: 'Notificaciones',
           child: NorificacionesPage(),
+        );
+      },
+      '/images': (context, state, data) {
+        final image = data as Map<String, dynamic>;
+        return BeamPage(
+          key: const ValueKey('image'),
+          type: BeamPageType.fadeTransition,
+          child: DetailsImage(image: image),
         );
       },
     },

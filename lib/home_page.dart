@@ -1,3 +1,4 @@
+import 'package:beamer/beamer.dart';
 import 'package:condominio_flamencos/app_bar.dart';
 import 'package:condominio_flamencos/info_page.dart';
 import 'package:condominio_flamencos/theme.dart';
@@ -51,22 +52,31 @@ class HomePage extends StatelessWidget {
               Column(
                 children: [
                   const SizedBox(height: 20),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.40,
-                    width: MediaQuery.of(context).size.width * 0.75,
-                    decoration: ShapeDecoration(
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(
-                          color: Colors.blue,
-                          width: 3,
+                  GestureDetector(
+                    onTap: () => context.beamToNamed(
+                      '/images',
+                      data: {'image': 'assets/images/home.png'},
+                    ),
+                    child: Hero(
+                      tag: 'image/assets/images/home.png',
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.38,
+                        width: MediaQuery.of(context).size.width * 0.75,
+                        decoration: ShapeDecoration(
+                          shape: RoundedRectangleBorder(
+                            side: const BorderSide(
+                              color: Colors.blue,
+                              width: 3,
+                            ),
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          color: Colors.white,
+                          image: const DecorationImage(
+                            image: AssetImage('assets/images/home.png'),
+                            alignment: Alignment.bottomCenter,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      color: Colors.white,
-                      image: const DecorationImage(
-                        image: AssetImage('assets/images/home3.png'),
-                        alignment: Alignment.bottomCenter,
-                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
@@ -87,23 +97,23 @@ class HomePage extends StatelessWidget {
                   ),
                   Row(
                     children: const [
-                      Expanded(
+/*                       Expanded(
                         child: Text(
                           'Condominio es el derecho real de propiedad sobre una cosa que pertenece en común a varias personas y que corresponde a cada una por una parte indivisa. Las partes de los condóminosse presumen iguales, excepto que la ley o el título dispongan otra proporción.',
                           style: textStyleBody,
                           maxLines: 4,
                           textAlign: TextAlign.justify,
                         ),
-                      ),
+                      ), */
                       SizedBox(width: 20),
-                      Expanded(
+/*                       Expanded(
                         child: Text(
                           'Condominio es el derecho real de propiedad sobre una cosa que pertenece en común a varias personas y que corresponde a cada una por una parte indivisa. Las partes de los condóminosse presumen iguales, excepto que la ley o el título dispongan otra proporción.',
                           style: textStyleBody,
                           maxLines: 4,
                           textAlign: TextAlign.justify,
                         ),
-                      ),
+                      ), */
                     ],
                   ),
                   const SizedBox(height: 20),
@@ -116,7 +126,7 @@ class HomePage extends StatelessWidget {
                         style: textStyleTitle,
                       ),
                       Text(
-                        'Pago de Condominio',
+                        'Fecha de Pago del Condominio',
                         style: textStyleTitle,
                       ),
                     ],
